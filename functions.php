@@ -13,6 +13,7 @@ add_action( 'wp_enqueue_scripts', 'awesome_script_enqueue');
 */
 function awesome_theme_setup() {
 
+/* below hook has be created to register the new menus */
     add_theme_support('automatic-feed-links');
     
 /*registering the new menu*/
@@ -23,3 +24,12 @@ function awesome_theme_setup() {
 }
 
 add_action('init', 'awesome_theme_setup');
+
+/* hood add team support be using for the custom background */
+add_theme_support('custom-background');
+
+/*custom header*/
+add_theme_support('custom-header');
+
+/**adding thumbnials */
+add_theme_support('post-thumbnails');
