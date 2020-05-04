@@ -31,5 +31,8 @@ add_theme_support('custom-background');
 /*custom header*/
 add_theme_support('custom-header');
 
-/**adding thumbnials */
+/**adding thumbnails */
 add_theme_support('post-thumbnails');
+
+/**word press give 9 formats so we have to define the post support */
+add_theme_support('post-formats',array('aside','image','video'));

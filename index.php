@@ -4,19 +4,11 @@
 
 	if( have_posts() ):
 
-		while( have_posts() ): the_post(); ?>
+		while( have_posts() ): the_post(); echo 'THIS IS POST FORMAT: '.get_post_format(); ?>
 
-			<h3><?php the_title(); ?></h3>
-
-			<!--hook to call the post thumbnails -->
-			<div class="thumbnail-img"><?php the_post_thumbnail(); ?> </div>
-
-            <!-- here the f j y means the time and date-->
-			<small>Posted on: <?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?>, in <?php the_category(); ?></small>
-
-			<p><?php the_content(); ?></p>
-
-			<hr>
+			<!--function used to get template part gives us the ability to include without
+			using included require from PHP a specific part of our team inside web-based directories-->
+			<?php get_template_part('content',get_post_format()); ?>
 
 		<?php endwhile;
 
